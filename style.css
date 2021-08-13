@@ -1,0 +1,174 @@
+/*Media Query*/
+/*Mixin*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 1rem;
+  background-repeat: cover;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#65C7D0), to(#ffa366cc));
+  opacity: 0.95;
+  color: #000c22;
+  background-color: none;
+}
+
+.nav {
+  width: 100%;
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  color: #fff;
+  background-color: #191919;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav ul li {
+  display: block;
+  float: right;
+  padding: 0.8rem;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  width: 90%;
+  margin-top: 5rem;
+  margin-left: 1rem;
+}
+
+.form {
+  display: inline-block;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.219);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.219);
+  border-radius: 2rem;
+  color: #fff;
+  background-color: #191919;
+}
+
+.form label {
+  display: inline-block;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.form input[type="text"],
+.form textarea {
+  color: #fff;
+  background-color: #191919;
+  width: 70%;
+  padding: 0.8rem;
+  border: 0.5px solid #3498db;
+  border-radius: 2rem;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  outline: none;
+}
+
+.form input[type="text"]:focus,
+.form textarea:focus {
+  width: 75%;
+  border-radius: 2rem;
+}
+
+.form-group,
+.card-title {
+  text-align: center;
+}
+
+.btn {
+  color: #3498db;
+  background-color: #191919;
+  border: 1px solid #3498db;
+  padding: 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0.5rem;
+  outline: none;
+  border-radius: 2rem;
+}
+
+.btn:hover {
+  color: #F1F9FF;
+  background-color: #3498db;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.card {
+  width: 100%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.219);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.219);
+  margin: 1rem;
+  margin-right: 5rem;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  font-weight: bolder;
+  border: 1px solid #191919;
+  scroll-margin-top: 5rem;
+}
+
+.col-3 {
+  position: fixed;
+  width: 40%;
+  float: left;
+  clear: both;
+}
+
+@media screen and (min-width: 576px) {
+  .col-3 {
+    width: 35%;
+  }
+}
+
+.col-6 {
+  width: 60%;
+  float: right;
+  margin-right: 3rem;
+  clear: both;
+}
+
+@media screen and (max-width: 1200px) {
+  .col-6 {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .col-6 {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .col-6 {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .col-6 {
+    width: 40%;
+  }
+}
+
+#up {
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  margin: 1rem;
+  float: left;
+  clear: both;
+}
+
+#up img {
+  width: 30%;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

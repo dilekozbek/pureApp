@@ -1,0 +1,177 @@
+$font: Helvetica,
+sans-serif;
+$fontSize: 1rem;
+$p: 0.8rem;
+$m: .5rem;
+$mt: 1rem;
+$box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.219);
+$radius: 2rem;
+$gradient:-webkit-gradient(linear, right top, left bottom, from(#65C7D0),to(#ffa366cc));
+
+/*Media Query*/
+$response-sm: 576px;
+$response-md: 800px;
+$response-lg: 1000px;
+$response-xl: 1200px;
+
+/*Mixin*/
+@mixin renk($color, $background) {
+    color: $color;
+    background-color: $background;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font;
+    font-size: $fontSize;
+    background-repeat:cover;
+    background-image:$gradient;
+    opacity: 0.95;
+    @include renk(#000c22,none);
+}
+
+.nav {
+    width: 100%;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    @include renk(#fff,#191919 );
+
+    ul {
+        list-style: none;
+
+        li {
+            display: block;
+            float: right;
+            padding: $p;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.container {
+    width: 90%;
+    margin-top: 5rem;
+    margin-left: 1rem;
+}
+
+.form {
+    display: inline-block;
+    box-shadow: $box-shadow;
+    border-radius: $radius;
+    @include renk(#fff,#191919 );
+
+    label {
+        display: inline-block;
+        padding: $p;
+        text-align: left;
+    }
+
+    input[type="text"],
+    textarea {
+        @include renk(#fff,#191919);
+        width: 70%;
+        padding: $p;
+        border: 0.5px solid #3498db;
+        border-radius: $radius;
+
+        transition: 0.25s;
+        outline: none;
+        &:focus {
+            width: 75%;
+            border-radius: $radius;
+        }
+    }
+}
+
+.form-group,
+.card-title {
+    text-align: center;
+
+}
+
+.btn {
+  @include renk(#3498db,#191919);
+  border: 1px solid #3498db;
+  padding: $p;
+  font-size: $fontSize ;
+  cursor: pointer;
+  margin: $m;
+  outline: none;
+  border-radius: $radius;
+  &:hover{
+    @include renk(#F1F9FF,#3498db);
+    transition: 0.8s;
+  }
+}
+
+.card {
+    width: 100%;
+    box-shadow: $box-shadow;
+    margin: $mt;
+    margin-right: 5rem;
+    padding: $p;
+    border-radius: $radius;
+    font-weight: bolder;
+    border: 1px solid #191919;
+    scroll-margin-top: 5rem;
+    
+}
+
+
+.col-3 {
+    position: fixed;
+    width: 40%;
+    float: left;
+    clear: both;
+    @media screen and (min-width: $response-sm){
+        width: 35%;
+        
+    }
+}
+
+.col-6 {
+    width: 60%;
+    float: right;
+    margin-right: 3rem;
+    clear: both;
+    @media screen and (max-width: $response-xl){
+        width: 50%;
+        
+    }
+    @media screen and (max-width: $response-lg){
+        width: 50%;
+        
+    }
+    @media screen and (max-width: $response-md){
+        width: 45%;
+        
+    }
+    @media screen and (max-width: $response-sm){
+        width: 40%;
+        
+    }
+}
+
+#up {
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    margin: 1rem;
+    float: left;
+    clear: both;
+
+    img {
+        width: 30%;
+        cursor: pointer;
+    }
+}
+
